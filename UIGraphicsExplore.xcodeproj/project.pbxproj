@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F77862A1219AA73E00B9CAC7 /* DYSDemo01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77862A0219AA73E00B9CAC7 /* DYSDemo01ViewController.m */; };
+		F77862A4219AAF9A00B9CAC7 /* DYSDemo1View.m in Sources */ = {isa = PBXBuildFile; fileRef = F77862A3219AAF9A00B9CAC7 /* DYSDemo1View.m */; };
 		F77A92E421957F1500C2984B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F77A92E321957F1500C2984B /* AppDelegate.m */; };
 		F77A92E721957F1500C2984B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77A92E621957F1500C2984B /* ViewController.m */; };
 		F77A92EA21957F1500C2984B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77A92E821957F1500C2984B /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F778629F219AA73E00B9CAC7 /* DYSDemo01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo01ViewController.h; sourceTree = "<group>"; };
+		F77862A0219AA73E00B9CAC7 /* DYSDemo01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo01ViewController.m; sourceTree = "<group>"; };
+		F77862A2219AAF9A00B9CAC7 /* DYSDemo1View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo1View.h; sourceTree = "<group>"; };
+		F77862A3219AAF9A00B9CAC7 /* DYSDemo1View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo1View.m; sourceTree = "<group>"; };
 		F77A92DF21957F1500C2984B /* UIGraphicsExplore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGraphicsExplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77A92E221957F1500C2984B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F77A92E321957F1500C2984B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 				F77A92E321957F1500C2984B /* AppDelegate.m */,
 				F77A92E521957F1500C2984B /* ViewController.h */,
 				F77A92E621957F1500C2984B /* ViewController.m */,
+				F778629F219AA73E00B9CAC7 /* DYSDemo01ViewController.h */,
+				F77862A0219AA73E00B9CAC7 /* DYSDemo01ViewController.m */,
+				F77862A2219AAF9A00B9CAC7 /* DYSDemo1View.h */,
+				F77862A3219AAF9A00B9CAC7 /* DYSDemo1View.m */,
 				F77A92E821957F1500C2984B /* Main.storyboard */,
 				F77A92EB21957F1600C2984B /* Assets.xcassets */,
 				F77A92ED21957F1600C2984B /* LaunchScreen.storyboard */,
@@ -143,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77A92E721957F1500C2984B /* ViewController.m in Sources */,
+				F77862A1219AA73E00B9CAC7 /* DYSDemo01ViewController.m in Sources */,
 				F77A92F221957F1600C2984B /* main.m in Sources */,
+				F77862A4219AAF9A00B9CAC7 /* DYSDemo1View.m in Sources */,
 				F77A92E421957F1500C2984B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
