@@ -11,96 +11,115 @@
 @implementation DYSDemo1View
 
 
+/**
+ With –drawRect:
+ 如果你的视图类实现了 -drawRect:，他们将像这样工作:
+ 
+ 当你调用 -setNeedsDisplay，UIKit 将会在这个视图的图层上调用 -setNeedsDisplay。这为图层设置了一个标识，标记为 dirty(直译是脏的意思，想不出用什么词比较贴切,污染？)，但还显示原来的内容。它实际上没做任何工作，所以多次调用 -setNeedsDisplay并不会造成性能损失。
+ 
+ 下面，当渲染系统准备好，它会调用视图图层的-display方法.此时，图层会装配它的后备存储。然后建立一个 Core Graphics 上下文(CGContextRef)，将后备存储对应内存中的数据恢复出来，绘图会进入对应的内存区域，并使用 CGContextRef 绘制。
+ 
+ 当你使用 UIKit 的绘制方法，例如: UIRectFill() 或者 -[UIBezierPath fill] 代替你的 -drawRect: 方法，他们将会使用这个上下文。使用方法是，UIKit 将后备存储的 CGContextRef 推进他的 graphics context stack，也就是说，它会将那个上下文设置为当前的。因此 UIGraphicsGetCurrent() 将会返回那个对应的上下文。既然 UIKit 使用 UIGraphicsGetCurrent() 绘制方法，绘图将会进入到图层的后备存储。如果你想直接使用 Core Graphics 方法，你可以自己调用 UIGraphicsGetCurrent() 得到相同的上下文，并且将这个上下文传给 Core Graphics 方法。
+ 
+ 从现在开始，图层的后备存储将会被不断的渲染到屏幕上。直到下次再次调用视图的 -setNeedsDisplay ，将会依次将图层的后备存储更新到视图上。
+ */
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-//    CGAffineTransform transform = CGAffineTransformMakeTranslation((self.bounds.size.width-50*5)/2, 100);
-//    transform = CGAffineTransformScale(transform, 5, 5);
-//
-//    UIBezierPath *path1 = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 50, 50) cornerRadius:10];
-//    [path1 applyTransform:transform];
-//    [[UIColor colorWithRed:198/255.0f green:198/255.0f blue:198/255.0f alpha:1.0f] setStroke];
-//    [path1 stroke];
-//
-//    UIBezierPath *path2 = [UIBezierPath bezierPathWithRect:CGRectMake(7, 10, 14, 12)];
-//    [path2 applyTransform:transform];
-//    [[UIColor colorWithRed:224/255.0f green:224/255.0f blue:224/255.0f alpha:1.0f] setFill];
-//    [path2 fill];
-//
-//    UIBezierPath *path3 = [UIBezierPath bezierPathWithRect:CGRectMake(7, 10, 14, 12)];
-//    [path3 applyTransform:transform];
-//    [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setStroke];
-//    [path3 stroke];
-//
-//    UIBezierPath *path11 = [UIBezierPath bezierPath];
-//    [path11 moveToPoint:CGPointMake(28, 10)];
-//    [path11 addLineToPoint:CGPointMake(43, 10)];
-//    [path11 applyTransform:transform];
-//    [[UIColor colorWithRed:153/255.0f green:153/255.0f blue:153/255.0f alpha:1.0f] setStroke];
-//    [path11 stroke];
-//
-//    UIBezierPath *path12 = [UIBezierPath bezierPath];
-//    [path12 moveToPoint:CGPointMake(28, 16)];
-//    [path12 addLineToPoint:CGPointMake(43, 16)];
-//    [path12 applyTransform:transform];
-//    [path12 stroke];
-//
-//    UIBezierPath *path13 = [UIBezierPath bezierPath];
-//    [path13 moveToPoint:CGPointMake(28, 22)];
-//    [path13 addLineToPoint:CGPointMake(43, 22)];
-//    [path13 applyTransform:transform];
-//    [path13 stroke];
-//
-//    UIBezierPath *path21 = [UIBezierPath bezierPath];
-//    [path21 moveToPoint:CGPointMake(7, 28)];
-//    [path21 addLineToPoint:CGPointMake(43, 28)];
-//    [path21 applyTransform:transform];
-//    [path21 stroke];
-//
-//    UIBezierPath *path22 = [UIBezierPath bezierPath];
-//    [path22 moveToPoint:CGPointMake(7, 34)];
-//    [path22 addLineToPoint:CGPointMake(43, 34)];
-//    [path22 applyTransform:transform];
-//    [path22 stroke];
-//
-//    UIBezierPath *path23 = [UIBezierPath bezierPath];
-//    [path23 moveToPoint:CGPointMake(7, 40)];
-//    [path23 addLineToPoint:CGPointMake(43, 40)];
-//    [path23 applyTransform:transform];
-//    [path23 stroke];
-
+    //  复写这个方法后不用自己创建上下文。
     
+    //  使用 UIKit 的绘制方法 自动使用当前CGContextRef
+    //    [self yyi_draw1];
+    //    [self yyi_draw2];
+    //    [self yyi_draw3];
     
+    //  使用Core Graphics方法绘制，使用UIGraphicsGetCurrentContext() 来获得绘画context
+        [self yyi_draw4];
+}
+
+- (void)yyi_draw1 {
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(16.72, 7.22)];
+    [path addLineToPoint:CGPointMake(3.29, 20.83)];
+    [path addLineToPoint:CGPointMake(0.4, 18.05)];
+    [path addLineToPoint:CGPointMake(18.8, -0.47)];
+    [path addLineToPoint:CGPointMake(37.21, 18.05)];
+    [path addLineToPoint:CGPointMake(34.31, 20.83)];
+    [path addLineToPoint:CGPointMake(20.88, 7.22)];
+    [path addLineToPoint:CGPointMake(20.88, 42.18)];
+    [path addLineToPoint:CGPointMake(16.72, 42.18)];
+    [path addLineToPoint:CGPointMake(16.72, 7.22)];
+    [path closePath];
+    path.lineWidth = 0.5;
+    [[UIColor redColor] setStroke];
+    [[UIColor orangeColor] setFill];
+    [path stroke];
+}
+
+- (void)yyi_draw2 {
+    [[UIColor redColor] setFill];
+    UIRectFill([self bounds]);
+}
+- (void)yyi_draw3 {
+    CGAffineTransform transform = CGAffineTransformMakeTranslation((self.bounds.size.width-50*5)/2, 100);
+    transform = CGAffineTransformScale(transform, 5, 5);
     
-//        UIBezierPath *path = [UIBezierPath bezierPath];
-//        [path moveToPoint:CGPointMake(16.72, 7.22)];
-//        [path addLineToPoint:CGPointMake(3.29, 20.83)];
-//        [path addLineToPoint:CGPointMake(0.4, 18.05)];
-//        [path addLineToPoint:CGPointMake(18.8, -0.47)];
-//        [path addLineToPoint:CGPointMake(37.21, 18.05)];
-//        [path addLineToPoint:CGPointMake(34.31, 20.83)];
-//        [path addLineToPoint:CGPointMake(20.88, 7.22)];
-//        [path addLineToPoint:CGPointMake(20.88, 42.18)];
-//        [path addLineToPoint:CGPointMake(16.72, 42.18)];
-//        [path addLineToPoint:CGPointMake(16.72, 7.22)];
-//        [path closePath];
-//        path.lineWidth = 0.5;
-//        [[UIColor redColor] setStroke];
-//        [[UIColor orangeColor] setFill];
-//
-//        [path stroke];
-
+    UIBezierPath *path1 = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 50, 50) cornerRadius:10];
+    [path1 applyTransform:transform];
+    [[UIColor colorWithRed:198/255.0f green:198/255.0f blue:198/255.0f alpha:1.0f] setStroke];
+    [path1 stroke];
     
-    /*
-     0.创建上下文 context
-     有两种情况1.复写drawrect方法，系统会自动为你生成的图形上下文。当你子类化了一个UIView并实现了自己的drawRect：方法后，一旦drawRect：方法被调用，Cocoa就会为你创建一个图形上下文，此时你对图形上下文的所有绘图操作都会显示在UIView上。直接可以用 UIGraphicsGetCurrentContext(); 获取上下文。
-     
-     2.第二种方法就是创建一个图片类型的上下文。调用UIGraphicsBeginImageContextWithOptions函数就可获得用来处理图片的图形上下文。利用该上下文，你就可以在其上进行绘图，并生成图片。调用UIGraphicsGetImageFromCurrentImageContext函数可从当前上下文中获取一个UIImage对象。记住在你所有的绘图操作后别忘了调用UIGraphicsEndImageContext函数关闭图形上下文。
-          
-     
+    UIBezierPath *path2 = [UIBezierPath bezierPathWithRect:CGRectMake(7, 10, 14, 12)];
+    [path2 applyTransform:transform];
+    [[UIColor colorWithRed:224/255.0f green:224/255.0f blue:224/255.0f alpha:1.0f] setFill];
+    [path2 fill];
+    
+    UIBezierPath *path3 = [UIBezierPath bezierPathWithRect:CGRectMake(7, 10, 14, 12)];
+    [path3 applyTransform:transform];
+    [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setStroke];
+    [path3 stroke];
+    
+    UIBezierPath *path11 = [UIBezierPath bezierPath];
+    [path11 moveToPoint:CGPointMake(28, 10)];
+    [path11 addLineToPoint:CGPointMake(43, 10)];
+    [path11 applyTransform:transform];
+    [[UIColor colorWithRed:153/255.0f green:153/255.0f blue:153/255.0f alpha:1.0f] setStroke];
+    [path11 stroke];
+    
+    UIBezierPath *path12 = [UIBezierPath bezierPath];
+    [path12 moveToPoint:CGPointMake(28, 16)];
+    [path12 addLineToPoint:CGPointMake(43, 16)];
+    [path12 applyTransform:transform];
+    [path12 stroke];
+    
+    UIBezierPath *path13 = [UIBezierPath bezierPath];
+    [path13 moveToPoint:CGPointMake(28, 22)];
+    [path13 addLineToPoint:CGPointMake(43, 22)];
+    [path13 applyTransform:transform];
+    [path13 stroke];
+    
+    UIBezierPath *path21 = [UIBezierPath bezierPath];
+    [path21 moveToPoint:CGPointMake(7, 28)];
+    [path21 addLineToPoint:CGPointMake(43, 28)];
+    [path21 applyTransform:transform];
+    [path21 stroke];
+    
+    UIBezierPath *path22 = [UIBezierPath bezierPath];
+    [path22 moveToPoint:CGPointMake(7, 34)];
+    [path22 addLineToPoint:CGPointMake(43, 34)];
+    [path22 applyTransform:transform];
+    [path22 stroke];
+    
+    UIBezierPath *path23 = [UIBezierPath bezierPath];
+    [path23 moveToPoint:CGPointMake(7, 40)];
+    [path23 addLineToPoint:CGPointMake(43, 40)];
+    [path23 applyTransform:transform];
+    [path23 stroke];
 
-     */
+}
 
+- (void)yyi_draw4 {
     //1.获取画布
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -121,8 +140,6 @@
     
     //5.释放path
     CGPathRelease(path);
-    
 }
-
 
 @end

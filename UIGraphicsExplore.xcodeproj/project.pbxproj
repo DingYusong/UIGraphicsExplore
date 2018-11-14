@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F73FEFE2219BF92F007F9A9D /* DYSDemo01Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = F73FEFE1219BF92F007F9A9D /* DYSDemo01Layer.m */; };
+		F73FF03F219C1833007F9A9D /* DYSDemo02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73FF03D219C1833007F9A9D /* DYSDemo02ViewController.m */; };
+		F73FF040219C1833007F9A9D /* DYSDemo02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73FF03E219C1833007F9A9D /* DYSDemo02ViewController.xib */; };
+		F73FF043219C1841007F9A9D /* DYSDemo03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73FF042219C1841007F9A9D /* DYSDemo03ViewController.m */; };
+		F73FF047219C1865007F9A9D /* DYSDemo04ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73FF045219C1865007F9A9D /* DYSDemo04ViewController.m */; };
+		F73FF048219C1865007F9A9D /* DYSDemo04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73FF046219C1865007F9A9D /* DYSDemo04ViewController.xib */; };
+		F73FF04A219C1B5D007F9A9D /* banner1.png in Resources */ = {isa = PBXBuildFile; fileRef = F73FF049219C1B5D007F9A9D /* banner1.png */; };
 		F77862A1219AA73E00B9CAC7 /* DYSDemo01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77862A0219AA73E00B9CAC7 /* DYSDemo01ViewController.m */; };
 		F77862A4219AAF9A00B9CAC7 /* DYSDemo1View.m in Sources */ = {isa = PBXBuildFile; fileRef = F77862A3219AAF9A00B9CAC7 /* DYSDemo1View.m */; };
 		F77A92E421957F1500C2984B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F77A92E321957F1500C2984B /* AppDelegate.m */; };
@@ -18,6 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F73FEFE0219BF92F007F9A9D /* DYSDemo01Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo01Layer.h; sourceTree = "<group>"; };
+		F73FEFE1219BF92F007F9A9D /* DYSDemo01Layer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo01Layer.m; sourceTree = "<group>"; };
+		F73FF03C219C1833007F9A9D /* DYSDemo02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo02ViewController.h; sourceTree = "<group>"; };
+		F73FF03D219C1833007F9A9D /* DYSDemo02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo02ViewController.m; sourceTree = "<group>"; };
+		F73FF03E219C1833007F9A9D /* DYSDemo02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYSDemo02ViewController.xib; sourceTree = "<group>"; };
+		F73FF041219C1841007F9A9D /* DYSDemo03ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo03ViewController.h; sourceTree = "<group>"; };
+		F73FF042219C1841007F9A9D /* DYSDemo03ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo03ViewController.m; sourceTree = "<group>"; };
+		F73FF044219C1865007F9A9D /* DYSDemo04ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo04ViewController.h; sourceTree = "<group>"; };
+		F73FF045219C1865007F9A9D /* DYSDemo04ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo04ViewController.m; sourceTree = "<group>"; };
+		F73FF046219C1865007F9A9D /* DYSDemo04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYSDemo04ViewController.xib; sourceTree = "<group>"; };
+		F73FF049219C1B5D007F9A9D /* banner1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner1.png; sourceTree = "<group>"; };
 		F778629F219AA73E00B9CAC7 /* DYSDemo01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo01ViewController.h; sourceTree = "<group>"; };
 		F77862A0219AA73E00B9CAC7 /* DYSDemo01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSDemo01ViewController.m; sourceTree = "<group>"; };
 		F77862A2219AAF9A00B9CAC7 /* DYSDemo1View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSDemo1View.h; sourceTree = "<group>"; };
@@ -64,6 +82,7 @@
 		F77A92E121957F1500C2984B /* UIGraphicsExplore */ = {
 			isa = PBXGroup;
 			children = (
+				F73FF049219C1B5D007F9A9D /* banner1.png */,
 				F77A92E221957F1500C2984B /* AppDelegate.h */,
 				F77A92E321957F1500C2984B /* AppDelegate.m */,
 				F77A92E521957F1500C2984B /* ViewController.h */,
@@ -72,6 +91,16 @@
 				F77862A0219AA73E00B9CAC7 /* DYSDemo01ViewController.m */,
 				F77862A2219AAF9A00B9CAC7 /* DYSDemo1View.h */,
 				F77862A3219AAF9A00B9CAC7 /* DYSDemo1View.m */,
+				F73FEFE0219BF92F007F9A9D /* DYSDemo01Layer.h */,
+				F73FEFE1219BF92F007F9A9D /* DYSDemo01Layer.m */,
+				F73FF03C219C1833007F9A9D /* DYSDemo02ViewController.h */,
+				F73FF03D219C1833007F9A9D /* DYSDemo02ViewController.m */,
+				F73FF03E219C1833007F9A9D /* DYSDemo02ViewController.xib */,
+				F73FF041219C1841007F9A9D /* DYSDemo03ViewController.h */,
+				F73FF042219C1841007F9A9D /* DYSDemo03ViewController.m */,
+				F73FF044219C1865007F9A9D /* DYSDemo04ViewController.h */,
+				F73FF045219C1865007F9A9D /* DYSDemo04ViewController.m */,
+				F73FF046219C1865007F9A9D /* DYSDemo04ViewController.xib */,
 				F77A92E821957F1500C2984B /* Main.storyboard */,
 				F77A92EB21957F1600C2984B /* Assets.xcassets */,
 				F77A92ED21957F1600C2984B /* LaunchScreen.storyboard */,
@@ -140,8 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77A92EF21957F1600C2984B /* LaunchScreen.storyboard in Resources */,
+				F73FF04A219C1B5D007F9A9D /* banner1.png in Resources */,
 				F77A92EC21957F1600C2984B /* Assets.xcassets in Resources */,
+				F73FF040219C1833007F9A9D /* DYSDemo02ViewController.xib in Resources */,
 				F77A92EA21957F1500C2984B /* Main.storyboard in Resources */,
+				F73FF048219C1865007F9A9D /* DYSDemo04ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +187,11 @@
 				F77A92E721957F1500C2984B /* ViewController.m in Sources */,
 				F77862A1219AA73E00B9CAC7 /* DYSDemo01ViewController.m in Sources */,
 				F77A92F221957F1600C2984B /* main.m in Sources */,
+				F73FF043219C1841007F9A9D /* DYSDemo03ViewController.m in Sources */,
 				F77862A4219AAF9A00B9CAC7 /* DYSDemo1View.m in Sources */,
+				F73FF03F219C1833007F9A9D /* DYSDemo02ViewController.m in Sources */,
+				F73FEFE2219BF92F007F9A9D /* DYSDemo01Layer.m in Sources */,
+				F73FF047219C1865007F9A9D /* DYSDemo04ViewController.m in Sources */,
 				F77A92E421957F1500C2984B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

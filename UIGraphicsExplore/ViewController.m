@@ -20,29 +20,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"tableview优化";
+    self.title = @"Graphics";
     
     self.dataSourceArray = @[
                              @{
-                                 @"title":@"tableViewcell新增但不清理老对象",
+                                 @"title":@"自定义View-复写drawRect",
                                  @"page":@"DYSDemo01ViewController"
                                  },
                              @{
-                                 @"title":@"tableViewcell新增但清理老对象",
+                                 @"title":@"自己创建context-UIGraphicsBeginImageContextWithOptions",
                                  @"page":@"DYSDemo02ViewController"
                                  },
                              @{
-                                 @"title":@"tableViewcell不复用",
+                                 @"title":@"自己创建context-CGBitmapContextCreate",
                                  @"page":@"DYSDemo03ViewController"
                                  },
                              @{
-                                 @"title":@"DYSBlockViewController",
-                                 @"page":@"DYSBlockViewController"
-                                 },
-                             @{
-                                 @"title":@"DYSNSTimerViewController",
-                                 @"page":@"DYSNSTimerViewController"
-                                 }];
+                                 @"title":@"绘图过程总结",
+                                 @"page":@"DYSDemo04ViewController"
+                                 },];
     
     self.tableView.rowHeight = 50;
 }
