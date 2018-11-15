@@ -21,8 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    UIImage *image = [UIImage imageNamed:@"banner1.png"];
+//    UIImage *image = [UIImage imageNamed:@"banner1.png"];
+    UIImage *image = [UIImage imageNamed:@"demo01.jpg"];
+
     unsigned char *imageBytes = [self pixelBRGABytesFromImage:image];
     
     CGSize imageSize = CGSizeMake(100, 100);
@@ -38,8 +39,6 @@
 
     //注：不要忘记释放malloc的内存
     free(imageBytes);
-
-    // Do any additional setup after loading the view.
 }
 - (unsigned char *)pixelBRGABytesFromImage:(UIImage *)image {
     return [self pixelBRGABytesFromImageRef:image.CGImage];

@@ -22,6 +22,7 @@
 		F77A92EC21957F1600C2984B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77A92EB21957F1600C2984B /* Assets.xcassets */; };
 		F77A92EF21957F1600C2984B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77A92ED21957F1600C2984B /* LaunchScreen.storyboard */; };
 		F77A92F221957F1600C2984B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F77A92F121957F1600C2984B /* main.m */; };
+		F7D93273219D5CBE009B4BA3 /* demo01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D93272219D5CBE009B4BA3 /* demo01.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F77A92EE21957F1600C2984B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F77A92F021957F1600C2984B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F77A92F121957F1600C2984B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D93272219D5CBE009B4BA3 /* demo01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo01.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				F73FF049219C1B5D007F9A9D /* banner1.png */,
+				F7D93272219D5CBE009B4BA3 /* demo01.jpg */,
 				F77A92E221957F1500C2984B /* AppDelegate.h */,
 				F77A92E321957F1500C2984B /* AppDelegate.m */,
 				F77A92E521957F1500C2984B /* ViewController.h */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77A92EF21957F1600C2984B /* LaunchScreen.storyboard in Resources */,
+				F7D93273219D5CBE009B4BA3 /* demo01.jpg in Resources */,
 				F73FF04A219C1B5D007F9A9D /* banner1.png in Resources */,
 				F77A92EC21957F1600C2984B /* Assets.xcassets in Resources */,
 				F73FF040219C1833007F9A9D /* DYSDemo02ViewController.xib in Resources */,
